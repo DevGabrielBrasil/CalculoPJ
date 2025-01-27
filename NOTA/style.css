@@ -1,0 +1,213 @@
+/* Reset básico para margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilo geral do body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    color: #333;
+    flex-direction: column;
+}
+
+/* Container geral para centralizar o conteúdo */
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+/* Estilo para o título */
+header h1 {
+    font-size: 24px;
+    color: #6f00ff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para o conteúdo principal */
+main {
+    flex: 2;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para a barra lateral (histórico) */
+aside {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo dos labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Estilo para os campos de entrada de valores */
+.input-reais {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fafafa;
+    font-size: 16px;
+}
+
+/* Estilo para o botão */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #6f00ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a00e6;
+}
+
+/* Estilo da tabela no histórico */
+#historico table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#historico th, #historico td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#historico th {
+    background-color: #6f00ff;
+    color: white;
+}
+
+/* Estilo para o botão de remover */
+.btn-remover {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-remover:hover {
+    background-color: #cc0000;
+}
+
+.container {
+    padding: 20px;
+}
+
+#gerarPDF {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#gerarPDF:hover {
+    background-color: #218838;
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e7f5e1;
+    border: 1px solid #c5e0c1;
+    border-radius: 5px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.formulario {
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+#calcular, #gerarPDF {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    flex: 1;
+}
+
+#calcular:hover, #gerarPDF:hover {
+    background-color: #218838;
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e7f5e1;
+    border: 1px solid #c5e0c1;
+    border-radius: 5px;
+}
+
+/* Estilização adicional para posicionar o botão "Declaração" */
+.container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.declaracao-container {
+    margin-right: 20px; /* Espaço entre o botão e o formulário */
+}
+
+#declaracao {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#declaracao:hover {
+    background-color: #0056b3;
+}
+
+.formulario {
+    flex-grow: 1;
+}
+

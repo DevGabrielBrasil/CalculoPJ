@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo PJ</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Botão "Declaração" à esquerda -->
+        <div class="declaracao-container">
+            <button id="declaracao" onclick="irParaSomaPDF()">Declaração</button>
+        </div>
+
+        <main>
+            <header>
+                <h1>Cálculo PJ</h1>
+            </header>
+            <div class="formulario">
+                <label for="salario">Salário:</label>
+                <input type="text" id="salario" class="input-reais" placeholder="Digite o salário"><br><br>
+
+                <label for="valeRefeicao">Vale Refeição por dia:</label>
+                <input type="text" id="valeRefeicao" class="input-reais" placeholder="Digite o valor do vale refeição"><br><br>
+
+                <label for="valeTransporte">Vale Transporte por dia:</label>
+                <input type="text" id="valeTransporte" class="input-reais" placeholder="Digite o valor do vale transporte"><br><br>
+
+                <label for="dataInicio">Data de Início:</label>
+                <input type="date" id="dataInicio" onchange="calcularDiasUteis()"><br><br>
+
+                <label for="dataFim">Data de Fim:</label>
+                <input type="date" id="dataFim" onchange="calcularDiasUteis()"><br><br>
+
+                <p id="dias-uteis">Total de dias úteis: <span id="dias-contagem">0</span></p><br>
+
+                <label for="das">Valor da DAS:</label>
+                <input type="text" id="das" class="input-reais" placeholder="Digite o valor da DAS"><br><br>
+
+                <label for="implantacao">Valor de Implantação:</label>
+                <input type="text" id="implantacao" class="input-reais" placeholder="Digite o valor de implantação"><br><br>
+
+                <div class="buttons">
+                    <button id="calcular" onclick="calcular()">Calcular</button>
+                    <button id="gerarPDF" onclick="gerarPDF()">Gerar PDF</button>
+                </div>
+            </div>
+            <div id="resultado" class="resultado"></div>
+        </main>
+        <aside id="historico">
+            <h2>Histórico</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Salário</th>
+                        <th>Vale Refeição</th>
+                        <th>Vale Transporte</th>
+                        <th>Total</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-historico"></tbody>
+            </table>
+        </aside>
+            <div id="resultado" class="resultado"></div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+    <script>
+        function irParaSomaPDF() {
+            
+            // Redireciona para a página da soma de PDFs
+            window.location.href = "calculo.html"; // Substitua pelo caminho correto para a página de soma de PDFs
+        }
+    </script>
+</body>
+</html>
