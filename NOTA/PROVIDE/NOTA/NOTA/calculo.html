@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de Valores em PDFs</title>
+    <style>
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Somar Valores de PDFs</h1>
+        <p>Envie dois ou mais arquivos PDF para calcular os valores:</p>
+        <input type="file" id="fileInput" multiple accept=".pdf">
+        <div class="button-group">
+            <button id="processButton">Processar PDFs</button>
+            <button id="voltarButton" onclick="window.location.href='index.html'">Voltar</button>
+        </div>
+        <div id="result" class="result" style="display: none;"></div>
+    </div>
+
+    <!-- Biblioteca jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script>
+        // Função para gerar PDF
+        function gerarPDF() {
+            const resultadoDiv = document.getElementById("result");
+            if (!resultadoDiv || resultadoDiv.innerHTML.trim() === "") {
+                alert("Nenhum resumo gerado para exportar!");
+                return;
+            }
+
+            const { jsPDF } = window.jspdf; // Inicializa jsPDF
+            const doc = new jsPDF();
+
+            // Adiciona o conteúdo ao PDF
+            doc.text(resultadoDiv.innerText, 10, 10);
+            doc.save("Resumo.pdf"); // Salva o PDF
+        }
+
+        // Adiciona o evento de clique ao botão "Gerar PDF"
+        document.getElementById("processButton").addEventListener("click", async () => {
+            // Lógica para processar PDFs e exibir o resultado
+            // ...
+
+            // Após processar, exibe o botão "Gerar PDF"
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML += `<button onclick="gerarPDF()">Gerar PDF</button>`;
+        });
+    </script>
+</body>
+</html>
